@@ -109,3 +109,58 @@ git push origin hw1p3handin
 ```
 
 By following these steps, you’ll gain hands-on experience with coverage analysis, fuzz testing, and debugging—key skills in application security.
+
+## What to Submit
+
+To submit your code, please only submit a file called `git_link.txt` that contains the name of your repository to **Gradescope**.
+For example, if your repo is located at 'h<span>ttps:</span>//github.com/NYUAppSecCF/appsec-homework-1-module-1-exampleaccount', you would submit a text file named `git_link.txt` with only line that reads with <ins><b>only</b></ins> the following:
+
+    appsec-homework-1-exampleaccount
+
+Remember that <b>Gradescope is not instant</b>. Especially if we have to look into past GitHub action runs. We have a timeout set for 10 minutes, almost all well running code will complete within 5 minutes. Wait for it to complete or timeout before trying to re-run. 
+
+For ease of grading, we ask that you also submit copies of your writeups as part2.txt and part3.txt directly in Gradescope. Please ensure that these writeups are exact copies of the files from your repository, as we have implemented a check to verify the match. **It cannot be blank, this will cause a hash failure!**. For further details on the writeup requirements, please refer to the grading rubric available in Brightspace under the "Assignment Guideline" section.
+
+Your repository should contain:    
+
+* Module 1
+  * Your `.github/workflows/hello.yml`
+  * At least one signed commit
+  * Your modified C code `module1.c'
+  * Your commpiled `module1.nyu`
+* Module 2
+  * In `testcases/invalid`: `crash1.gft`, `crash2.gft`, and `hang.gft`.
+  * A text file named `part2.txt` that contains the bug descriptions
+    for each of the three test cases
+  * A GitHub Actions YML that runs your tests
+  * A commit with the fixed version of the code (if you like, this
+    commit can also contain the files mentioned above)
+* Module 3
+  * In `testcases/valid`: include the files `cov1.gft`, `cov2.gft`, and
+    in `testcases/invalid`: include the additional files `fuzzer1.gft`,
+    and `fuzzer2.gft`
+  * A text file named `part3.txt` that contains your writeup
+  * An updated Actions YML that runs the new tests
+  * A commit with the fixed version of the code (if you like, this
+    commit can also contain the files mentioned above)
+
+
+## Concluding Remarks
+
+Despite the fixes you've made, there are almost certainly still many
+bugs lurking in the program. Although it is possible to get to a secure
+program by repeatedly finding and fixing bugs (at least when the program
+is this small), it's a lot of work, and just because a fuzzer stops
+finding bugs doesn't mean that the program is bug-free!
+
+Realistically, this program is probably not salvageable in its current
+state. It would be better in this case to rewrite it from scratch,
+either in C using a very defensive programming style, or in a safer
+language like Python or Rust. In the "clean" directory, you can find
+a cleanly written version of the program (written in C) that
+should be relatively bug-free [1]. You'll notice that it's a lot more
+verbose, and checks for many more errors than the buggy
+version---writing safe C code is difficult!
+
+[1] Although you are encouraged to try to prove us wrong by finding bugs
+    in it!
