@@ -7,6 +7,7 @@
 - [Step 3: Fix the Bugs](#step-3-using-the-fuzzing-information)
 - [Hints and Tips](#hints-and-tips)
 - [Submission](#what-to-submit)
+- [Conclusing Remarks](#concluding-remarks)
 
 
 
