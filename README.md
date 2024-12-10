@@ -2,7 +2,7 @@
 
 ### **Step 0: Pulling in Your Code**
 
-``bash
+```bash
 git remote add upstream https://github.com/NYUAppSecCF/appsec_hw1_module2-YOURPART1REPO
 git fetch upstream
 git merge upstream/main --allow-unrelated-histories
